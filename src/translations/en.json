@@ -1,0 +1,12 @@
+{
+	"app.title": "Barcode & QR Code Generator",
+	"app.subtitle": "Generate barcode and QR code online and offline",
+	"app.footer.created_by": "Created by",
+	"app.footer.source_available_at": "Source code available at",
+
+	"word.barcode": "Barcode",
+	"word.qrcode": "QR Code",
+	"word.reset": "Reset",
+
+	"util.currently_not_supported": "Currently not supported"
+}

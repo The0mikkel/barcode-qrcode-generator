@@ -1,0 +1,12 @@
+{
+	"app.title": "Stregkode & QR-kodegenerator",
+	"app.subtitle": "Generer stregkode og QR-kode online og offline",
+	"app.footer.created_by": "Oprettet af",
+	"app.footer.source_available_at": "Kildekode tilgængelig på",
+
+	"word.barcode": "Stregkode",
+	"word.qrcode": "QR-kode",
+	"word.reset": "Nulstil",
+
+	"util.currently_not_supported": "I øjeblikket ikke understøttet"
+}

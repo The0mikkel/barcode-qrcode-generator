@@ -7,9 +7,9 @@ const pwaConfig = {
 	registerType: "prompt",
 	includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
 	manifest: {
-		name: "Vite PWA",
-		short_name: "Vite PWA",
-		description: "A Vite React PWA starter template",
+		name: "Barcode & QR Code Generator",
+		short_name: "TM - Barcode & QR",
+		description: "Generate barcode and QR code online and offline",
 		icons: [
 			{
 				src: "/pwa-64x64.png",
