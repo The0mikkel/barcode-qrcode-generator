@@ -1,12 +1,20 @@
 {
 	"app.title": "Barcode & QR Code Generator",
 	"app.subtitle": "Generate barcode and QR code online and offline",
+	"app.generator.format": "Format",
+	"app.generator.value": "Value",
+	"app.generator.value.placeholder": "Barcode",
+	"app.generator.value.no_value": "No value given",
+	"app.generator.share": "Share",
+	"app.generator.barcode.view": "View barcode",
+	"app.generator.barcode.share": "Share barcode",
+	"app.generator.barcode.save": "Save barcode",
 	"app.footer.created_by": "Created by",
 	"app.footer.source_available_at": "Source code available at",
-
 	"word.barcode": "Barcode",
 	"word.qrcode": "QR Code",
 	"word.reset": "Reset",
-
+	"word.close": "Close",
+	"word.share": "Share",
 	"util.currently_not_supported": "Currently not supported"
 }

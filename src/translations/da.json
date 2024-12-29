@@ -1,12 +1,20 @@
 {
 	"app.title": "Stregkode & QR-kodegenerator",
 	"app.subtitle": "Generer stregkode og QR-kode online og offline",
+	"app.generator.format": "Format",
+	"app.generator.value": "Værdi",
+	"app.generator.value.placeholder": "Stregkode",
+	"app.generator.value.no_value": "Ingen værdi givet",
+	"app.generator.share": "Del",
+	"app.generator.barcode.view": "Se stregkode",
+	"app.generator.barcode.share": "Del stregkode",
+	"app.generator.barcode.save": "Gem stregkode",
 	"app.footer.created_by": "Oprettet af",
 	"app.footer.source_available_at": "Kildekode tilgængelig på",
-
 	"word.barcode": "Stregkode",
 	"word.qrcode": "QR-kode",
 	"word.reset": "Nulstil",
-
+	"word.close": "Luk",
+	"word.share": "Del",
 	"util.currently_not_supported": "I øjeblikket ikke understøttet"
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import Barcode from "react-barcode";
 import { BarcodeEnum, BarcodeFormat, BarcodeRegex } from "@/types/barcode";
-import Generator from "@/molecules/Generator";
+import Generator from "@/molecules/Barcode/Generator";
 import { BarcodeProvider, useBarcode } from "@/state/barcodeContext";
 import { URLHelper } from "@/helper/URL";
 import { useTranslation } from 'react-i18next';
+import { MdIosShare, MdRestore } from "react-icons/md";
 
 export default function App() {
 	// Get paramters from the URL
@@ -15,7 +16,7 @@ export default function App() {
 	if (barcodeStrings.includes(formatKey)) {
 		format = BarcodeEnum[formatKey as BarcodeFormat];
 	}
-	const value = URLHelper.getParameter('value') || 'Barcode';
+	const value = URLHelper.getParameter('value') || '';
 
 	return (
 		<BarcodeProvider format={format} value={value}>
@@ -89,19 +90,44 @@ function Body() {
 				</div>}
 
 				{/* Reset */}
-				<div className="flex justify-center mt-4">
-					<button
-						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-						onClick={() => {
-							setFormat(BarcodeEnum.CODE128);
-							setValue("Barcode");
+				<div className="flex flex-col items-center justify-center">
+					<div className="flex justify-center mt-4">
+						<button
+							className="flex flex-row items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+							onClick={() => {
+								setFormat(BarcodeEnum.CODE128);
+								setValue("");
 
-							URLHelper.removeParameter('format');
-							URLHelper.removeParameter('value');
-						}}
-					>
-						{t('word.reset')}
-					</button>
+								URLHelper.removeParameter('format');
+								URLHelper.removeParameter('value');
+							}}
+						>
+							<MdRestore className="text-xl mr-2" />
+							{t('word.reset')}
+						</button>
+						<button
+							className="flex flex-row items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+							onClick={() => {
+								// Get current URL
+								const url = window.location.href;
+
+								// Copy to clipboard
+								navigator.clipboard.writeText(url);
+
+								// Prompt mobile share
+								if (navigator.share) {
+									navigator.share({
+										title: "Barcode",
+										text: "Barcode",
+										url: url,
+									});
+								}
+							}}
+						>
+							<MdIosShare className="text-xl mr-2" />
+							{t('word.share')}
+						</button>
+					</div>
 				</div>
 			</main>
 
