@@ -10,7 +10,7 @@
 	"app.generator.barcode.view": "Se stregkode",
 	"app.generator.barcode.share": "Del stregkode",
 	"app.generator.barcode.save": "Gem stregkode",
-	"app.footer.created_by": "Oprettet af",
+	"app.footer.created_by": "Lavet af",
 	"app.footer.source_available_at": "Kildekode tilgængelig på",
 	"word.barcode": "Stregkode",
 	"word.qrcode": "QR-kode",
