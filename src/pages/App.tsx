@@ -37,8 +37,8 @@ function Body() {
 	const { setFormat, setValue } = useBarcode();
 
 	return (
-		<body className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-			<div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-lg w-full">
+		<body className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+			<main className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-lg w-full">
 				<h1 className="text-2xl font-bold mb-4 text-center text-black dark:text-white">Barcode & QR Code Generator</h1>
 				<p className="text-gray-600 dark:text-gray-400 mb-6 text-center">
 					Generate barcode and QR code images with React.
@@ -77,7 +77,7 @@ function Body() {
 					<i>
 						Currently not supported
 					</i>
-					</div>}
+				</div>}
 
 				{/* Reset */}
 				<div className="flex justify-center mt-4">
@@ -94,7 +94,31 @@ function Body() {
 						Reset
 					</button>
 				</div>
-			</div>
+			</main>
+
+			<footer className="flex justify-center mt-8 text-gray-600 dark:text-gray-400">
+				<p>
+					Created by
+					{" "}
+					<a
+						href="https://themikkel.dk"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="underline"
+					>
+						Mikkel Albrechtsen
+					</a> - Source code available on <a
+						href="
+						https://github.com/The0mikkel/tm-barcode-qrcode-generator
+						"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="underline"
+					>
+						Github
+					</a>
+				</p>
+			</footer>
 		</body>
 	);
 }
