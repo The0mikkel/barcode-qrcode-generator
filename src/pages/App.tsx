@@ -1,6 +1,5 @@
 import React from "react";
-import Barcode from "react-barcode";
-import { BarcodeEnum, BarcodeFormat, BarcodeRegex } from "@/types/barcode";
+import { BarcodeEnum, BarcodeFormat } from "@/types/barcode";
 import Generator from "@/molecules/Barcode/Generator";
 import { BarcodeProvider, useBarcode } from "@/state/barcodeContext";
 import { URLHelper } from "@/helper/URL";
@@ -41,8 +40,8 @@ function Body() {
 	const { setFormat, setValue } = useBarcode();
 
 	return (
-		<body className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-			<main className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-lg w-full">
+		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900" lang={i18n.language}>
+			<main className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-lg w-full" lang={i18n.language}>
 				<h1 className="text-2xl font-bold mb-4 text-center text-black dark:text-white">
 					{t('app.title')}
 				</h1>
@@ -158,6 +157,6 @@ function Body() {
 					</a>
 				</p>
 			</footer>
-		</body>
+		</div>
 	);
 }

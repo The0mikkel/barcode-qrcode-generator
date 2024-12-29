@@ -1,12 +1,9 @@
 import Barcode from "@/atoms/barcode";
-import BarcodeWrapper from "./BarcodeWrapper";
 import { useBarcode } from "@/state/barcodeContext";
 import Modal from 'react-modal';
-import { t, use } from "i18next";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
-import { MdDownload, MdIosShare, MdLink } from "react-icons/md";
-import html2canvas from "html2canvas";
+import { useState } from "react";
+import { MdDownload, MdIosShare } from "react-icons/md";
 import barcodeSaver from "@/helper/barcodeSaver";
 
 type BarcodeModalProps = {

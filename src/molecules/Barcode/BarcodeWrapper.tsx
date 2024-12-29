@@ -1,7 +1,6 @@
 import { BarcodeFormat } from "@/types/barcode";
 import { useTranslation } from "react-i18next";
-import { MdDownload, MdFullscreen, MdIosShare } from "react-icons/md";
-import html2canvas from "html2canvas";
+import { MdDownload, MdFullscreen } from "react-icons/md";
 import Barcode from "@/atoms/barcode";
 import React from "react";
 import BarcodeModal from "./BarcodeViewerModal";
