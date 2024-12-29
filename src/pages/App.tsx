@@ -83,9 +83,9 @@ function Body() {
 				</div>
 				{/* Generator */}
 				{generator === "barcode" && <Generator />}
-				{generator === "qr" && <div className="flex justify-center my-20">
+				{generator === "qr" && <div className="flex justify-center my-20 text-gray-600 dark:text-gray-400">
 					<i>
-						{t('util.util.currently_not_supported')}
+						{t('util.currently_not_supported')}
 					</i>
 				</div>}
 
