@@ -5,6 +5,7 @@ import { BarcodeProvider, useBarcode } from "@/state/barcodeContext";
 import { URLHelper } from "@/helper/URL";
 import { useTranslation } from 'react-i18next';
 import { MdIosShare, MdRestore } from "react-icons/md";
+import InstallPWA from "@/molecules/pwa/InstallPWA";
 
 export default function App() {
 	// Get paramters from the URL
@@ -59,9 +60,9 @@ function Body() {
 							value="barcode"
 							onChange={handleTypeUpdate}
 							checked={generator === "barcode"}
-							className="form-radio text-blue-600 dark:text-blue-400"
+							className="form-radio text-blue-600 dark:text-blue-400 transition-colors"
 						/>
-						<label htmlFor="barcode" className="ml-2 text-gray-700 dark:text-gray-300">
+						<label htmlFor="barcode" className="ml-2 text-gray-700 dark:text-gray-300 transition-colors">
 							{t('word.barcode')}
 						</label>
 					</div>
@@ -73,9 +74,9 @@ function Body() {
 							value="qr"
 							onChange={handleTypeUpdate}
 							checked={generator === "qr"}
-							className="form-radio text-blue-600 dark:text-blue-400"
+							className="form-radio text-blue-600 dark:text-blue-400 transition-colors"
 						/>
-						<label htmlFor="qr" className="ml-2 text-gray-700 dark:text-gray-300">
+						<label htmlFor="qr" className="ml-2 text-gray-700 dark:text-gray-300 transition-colors">
 							{t('word.qrcode')}
 						</label>
 					</div>
@@ -92,7 +93,7 @@ function Body() {
 				<div className="flex flex-col items-center justify-center">
 					<div className="flex justify-center mt-4">
 						<button
-							className="flex flex-row items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+							className="flex flex-row items-center justify-center bg-blue-500 hover:bg-blue-700 transition-colors text-white font-bold py-2 px-4 rounded mr-4"
 							onClick={() => {
 								setFormat(BarcodeEnum.CODE128);
 								setValue("");
@@ -105,7 +106,7 @@ function Body() {
 							{t('word.reset')}
 						</button>
 						<button
-							className="flex flex-row items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+							className="flex flex-row items-center justify-center bg-blue-500 hover:bg-blue-700 transition-colors text-white font-bold py-2 px-4 rounded"
 							onClick={() => {
 								// Get current URL
 								const url = window.location.href;
@@ -130,32 +131,39 @@ function Body() {
 				</div>
 			</main>
 
-			<footer className="flex justify-center mt-8 text-gray-600 dark:text-gray-400">
-				<p>
-					{t('app.footer.created_by')}
-					{" "}
-					<a
-						href="https://themikkel.dk"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="underline"
-					>
-						Mikkel Albrechtsen
-					</a> -
-					{" "}
-					{t('app.footer.source_available_at')}
-					{" "}
-					<a
-						href="
+			<footer className="flex flex-col justify-center mt-8 text-gray-600 dark:text-gray-400">
+				<div>
+					<p>
+						{t('app.footer.created_by')}
+						{" "}
+						<a
+							href="https://themikkel.dk"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							Mikkel Albrechtsen
+						</a> -
+						{" "}
+						{t('app.footer.source_available_at')}
+						{" "}
+						<a
+							href="
 						https://github.com/The0mikkel/tm-barcode-qrcode-generator
 						"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="underline"
-					>
-						Github
-					</a>
-				</p>
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							Github
+						</a>
+					</p>
+				</div>
+
+				{/* PWA install button */}
+				<div className="flex justify-center">
+					<InstallPWA />
+				</div>
 			</footer>
 		</div>
 	);

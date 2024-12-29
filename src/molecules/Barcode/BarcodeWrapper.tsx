@@ -37,7 +37,7 @@ export default function BarcodeWrapper(props: BarcodeProps) {
                     <div className="flex flex-row items-center justify-center border-t border-b border-gray-300 dark:border-gray-700 p-4 w-full mt-4">
                         {/* Save image */}
                         <button
-                            className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 mr-6"
+                            className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 mr-6 transition-colors"
                             onClick={() => {
                                 // Save the barcode as an image
                                 barcodeSaver(barcodeId);
@@ -49,7 +49,7 @@ export default function BarcodeWrapper(props: BarcodeProps) {
 
                         {/* Open */}
                         <button
-                            className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 mr-4"
+                            className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors mr-4"
                             onClick={() => {
                                 setViewerOpen(true);
                             }}

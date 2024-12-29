@@ -1,6 +1,7 @@
 {
 	"app.title": "Stregkode & QR-kodegenerator",
 	"app.subtitle": "Generer stregkode og QR-kode online og offline",
+	"app.pwa.install": "Installer som en app",
 	"app.generator.format": "Format",
 	"app.generator.value": "Værdi",
 	"app.generator.value.placeholder": "Stregkode",

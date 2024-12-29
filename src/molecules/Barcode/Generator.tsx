@@ -47,7 +47,7 @@ export default function Generator(): JSX.Element {
 					<select
 						value={format}
 						onChange={handleFormatChange}
-						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100  transition-colors"
 					>
 						{Object.keys(BarcodeEnum).map((key) => (
 							<option key={key} value={key}>
@@ -65,7 +65,7 @@ export default function Generator(): JSX.Element {
 						type="text"
 						value={value}
 						onChange={handleValueChange}
-						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100  transition-colors"
 						placeholder={t("app.generator.value.placeholder")}
 					/>
 					{error && <p className="text-red-500 mt-2">{error}</p>}

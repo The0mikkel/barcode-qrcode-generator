@@ -39,7 +39,7 @@ export default function BarcodeModal({ modalIsOpen, afterOpenModal, closeModal }
                 <div className="flex flex-row items-center justify-center border-t border-b border-gray-300 dark:border-gray-700 p-4 w-full mt-4">
                     {/* Share image */}
                     <button
-                        className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 mr-6"
+                        className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors mr-6"
                         onClick={() => {
                             // Save the barcode as an image
                             barcodeSaver(barcodeId);
@@ -51,7 +51,7 @@ export default function BarcodeModal({ modalIsOpen, afterOpenModal, closeModal }
 
                     {/* Share link */}
                     <button
-                        className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+                        className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                         onClick={() => {
                             // Get current URL
                             const url = window.location.href;
@@ -77,7 +77,7 @@ export default function BarcodeModal({ modalIsOpen, afterOpenModal, closeModal }
                 <div className="flex flex-row justify-center w-full">
                     <button
                         onClick={closeModal}
-                        className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        className="mt-6 bg-blue-500 hover:bg-blue-700 text-white transition-colors font-bold py-2 px-4 rounded"
                     >
                         {t("word.close")}
                     </button>
