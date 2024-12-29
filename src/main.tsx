@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './pages/App.js'
 import './index.css'
-import { BarcodeProvider } from './state/barcodeContext.jsx';
-import { BarcodeEnum } from './types/barcode.js';
+import './i18n.js'
 
 const rootElement = document.getElementById('root');
 

@@ -1,10 +1,13 @@
-import Barcode from "@/atoms/barcode";
 import { URLHelper } from "@/helper/URL";
-import { BarcodeProvider, useBarcode } from "@/state/barcodeContext";
+import { useBarcode } from "@/state/barcodeContext";
 import { BarcodeEnum, BarcodeFormat, BarcodeRegex } from "@/types/barcode";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import BarcodeWrapper from "./BarcodeWrapper";
 
 export default function Generator(): JSX.Element {
+	const { t } = useTranslation();
+
 	const { format, value, setFormat, setValue } = useBarcode();
 	const [error, setError] = React.useState<string>("");
 
@@ -38,7 +41,9 @@ export default function Generator(): JSX.Element {
 		<>
 			<div className="space-y-6">
 				<div>
-					<label className="block text-gray-700 dark:text-gray-300 mb-2">Format</label>
+					<label className="block text-gray-700 dark:text-gray-300 mb-2">
+						{t("app.generator.format")}
+					</label>
 					<select
 						value={format}
 						onChange={handleFormatChange}
@@ -53,19 +58,22 @@ export default function Generator(): JSX.Element {
 				</div>
 
 				<div>
-					<label className="block text-gray-700 dark:text-gray-300 mb-2">Value</label>
+					<label className="block text-gray-700 dark:text-gray-300 mb-2">
+						{t("app.generator.value")}
+					</label>
 					<input
 						type="text"
 						value={value}
 						onChange={handleValueChange}
 						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+						placeholder={t("app.generator.value.placeholder")}
 					/>
 					{error && <p className="text-red-500 mt-2">{error}</p>}
 				</div>
 
 				<div className="text-center">
 					<div className="flex justify-center">
-						<Barcode value={value} format={format} />
+						<BarcodeWrapper value={value} format={format} />
 					</div>
 				</div>
 			</div>
