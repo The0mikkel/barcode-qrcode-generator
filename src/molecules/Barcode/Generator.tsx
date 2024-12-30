@@ -41,10 +41,12 @@ export default function Generator(): JSX.Element {
 		<>
 			<div className="space-y-6">
 				<div>
-					<label className="block text-gray-700 dark:text-gray-300 mb-2">
+					<label className="block text-gray-700 dark:text-gray-300 mb-2" htmlFor="barcode-format">
 						{t("app.generator.format")}
 					</label>
 					<select
+						id="barcode-format"
+						name="barcode-format"
 						value={format}
 						onChange={handleFormatChange}
 						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100  transition-colors"
@@ -58,11 +60,13 @@ export default function Generator(): JSX.Element {
 				</div>
 
 				<div>
-					<label className="block text-gray-700 dark:text-gray-300 mb-2">
+					<label className="block text-gray-700 dark:text-gray-300 mb-2" htmlFor="barcode-value">
 						{t("app.generator.value")}
 					</label>
 					<input
 						type="text"
+						id="barcode-value"
+						name="barcode-value"
 						value={value}
 						onChange={handleValueChange}
 						className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100  transition-colors"
