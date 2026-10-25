@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "license": "",
   "author": "Mikkel Albrechtsen",
   "scripts": {
@@ -17,6 +20,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
     "html2canvas": "^1.4.1",
     "i18next": "^24.2.0",
     "react": "^18.3.0"
@@ -40,7 +44,7 @@
     "react-modal": "^3.16.3",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.7.2",
-    "vite": "^6.0.6",
+    "vite": "^8.0",
     "vite-plugin-pwa": "^2.0.0",
     "vite-tsconfig-paths": "^5.1.4"
   }
