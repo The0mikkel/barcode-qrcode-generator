@@ -32,4 +32,3 @@ dist-ssr
 .env.production.local
 .env
 yarn.lock
-package-lock.json
